@@ -3,85 +3,245 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Layanan Pemeliharaan Komputer</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Computer Maintenance</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Montserrat:wght@500;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #1c1c1c;
+            color: #fff;
+        }
+
+        header {
+            background: linear-gradient(135deg, #ff2d00, #a50000);
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: #ffcc00;
+        }
+
+        #hero {
+            background: url('https://source.unsplash.com/1600x900/?gaming,computer') no-repeat center center/cover;
+            color: #fff;
+            padding: 100px 20px;
+            text-align: center;
+            background-blend-mode: darken;
+            position: relative;
+        }
+
+        #hero::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.6);
+            z-index: 1;
+        }
+
+        #hero h2 {
+            font-size: 2.5em;
+            z-index: 2;
+            position: relative;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background: #ffcc00;
+            color: #333;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-top: 20px;
+            transition: background 0.3s, transform 0.3s;
+            z-index: 2;
+            position: relative;
+        }
+
+        .cta-button:hover {
+            background: #e6b800;
+            transform: scale(1.05);
+        }
+
+        section {
+            padding: 40px 20px;
+            margin: 20px;
+            background: #2a2a2a;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+        }
+
+        .service {
+            margin-bottom: 20px;
+            padding: 20px;
+            border: 1px solid #ff2d00;
+            border-radius: 10px;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .service:hover {
+            transform: scale(1.05);
+            box-shadow: 0 4px 20px rgba(255, 45, 0, 0.5);
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px 0;
+            background: #333;
+            color: #fff;
+        }
+
+        .testimonial {
+            background: #444;
+            padding: 15px;
+            border-radius: 5px;
+            margin: 10px 0;
+        }
+
+        .faq {
+            margin: 10px 0;
+        }
+
+        .faq h4 {
+            margin: 0;
+            cursor: pointer;
+            color: #ffcc00;
+        }
+
+        .faq p {
+            display: none;
+            margin: 5px 0 0 0;
+        }
+    </style>
 </head>
 <body>
     <header>
-        <img src="Logo_web.png" alt="Logo Layanan Pemeliharaan Komputer" class="logo">
-        <h1>Layanan Pemeliharaan Komputer</h1>
+        <h1>Computer Maintenance</h1>
         <nav>
             <ul>
-                <li><a href="#services">Layanan</a></li>
                 <li><a href="#about">Tentang Kami</a></li>
+                <li><a href="#services">Layanan</a></li>
+                <li><a href="#testimonials">Testimonial</a></li>
+                <li><a href="#faq">FAQ</a></li>
                 <li><a href="#contact">Kontak</a></li>
             </ul>
         </nav>
     </header>
 
-    <main>
-        <section id="services">
-            <h2>Layanan Kami</h2>
-            <div class="service">
-                <h3>Pemeliharaan Rutin</h3>
-                <p>Pemeliharaan rutin untuk menjaga performa komputer Anda.</p>
-            </div>
-            <div class="service">
-                <h3>Perbaikan Hardware</h3>
-                <p>Perbaikan komponen hardware yang rusak atau bermasalah.</p>
-            </div>
-            <div class="service">
-                <h3>Perbaikan Software</h3>
-                <p>Perbaikan software yang rusak atau bermasalah.</p>
-            </div>
-        </section>
+    <section id="hero">
+        <h2>Jasa Servis Komputer dan Laptop</h2>
+        <p>Solusi terbaik untuk masalah komputer Anda.</p>
+        <a href="#contact" class="cta-button">Hubungi Kami</a>
+    </section>
 
-        <section id="about">
-            <h2>Tentang Kami</h2>
-            <p>Kami adalah tim profesional yang siap membantu Anda dengan masalah komputer Anda. Dengan pengalaman bertahun-tahun, kami berkomitmen untuk memberikan layanan terbaik.</p>
-        </section>
+    <section id="about">
+        <h2>Tentang Kami</h2>
+        <p>Kami adalah penyedia layanan servis komputer dan laptop yang berpengalaman. Dengan tim teknisi yang terlatih dan profesional, kami siap membantu Anda mengatasi berbagai masalah perangkat keras dan perangkat lunak. Kami berkomitmen untuk memberikan layanan terbaik dan solusi yang tepat untuk kebutuhan Anda.</p>
+    </section>
 
-        <section id="contact">
-            <h2>Kontak Kami</h2>
-            <form>
-                <label for="name">Nama:</label>
-                <input type="text" id="name" name="name" required>
-                
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required>
-                
-                <label for="message">Pesan:</label>
-                <textarea id="message" name="message" required></textarea>
-                
-                <button type="submit">Kirim</button>
-            </form>
-        </section>
+    <section id="services">
+        <h2>Layanan Kami</h2>
+        <div class="service">
+            <h3>Servis Hardware</h3>
+            <p>Perbaikan dan penggantian komponen hardware seperti motherboard, RAM, dan hard disk.</p>
+        </div>
+        <div class="service">
+            <h3>Servis Software</h3>
+            <p>Instalasi dan perbaikan software, termasuk sistem operasi dan aplikasi.</p>
+        </div>
+        <div class="service">
+            <h3>Perawatan Rutin</h3>
+            <p>Perawatan berkala untuk menjaga performa komputer dan laptop Anda.</p>
+        </div>
+        <div class="service">
+            <h3>Upgrade Sistem</h3>
+            <p>Peningkatan komponen untuk meningkatkan performa komputer Anda.</p>
+        </div>
+        <div class="service">
+            <h3>Data Recovery</h3>
+            <p>Pemulihan data yang hilang akibat kerusakan hardware atau software.</p>
+        </div>
+    </section>
 
-        <section id="info">
-            <h2>Informasi Kontak</h2>
-            <div class="info-box">
-                <h3>Email</h3>
-                <p>computermaintenancebandung@gmail.com</p>
-            </div>
-            <div class="info-box">
-                <h3>Toko</h3>
-                <p>Kampung Sayuran Rt003/Rw007 No.40 Cijerah
-                   Bandung Kulon, Kota Bandung, Jawa Barat, ID 40213.
-                </p>
-            </div>
-            <div class="info-box">
-                <h3>Kontak</h3>
-                <p>-</p>
-            </div>
-            <div class="info-box">
-                <h3>Toko di Shopee</h3>
-                <a href="https://shopee.co.id/computermaintenance" target="_blank" class="shopee-button">Kunjungi Toko Shopee</a>
-            </div>
-        </section>
-    </main>
+    <section id="testimonials">
+        <h2>Testimonial</h2>
+        <div class="testimonial">
+            <p>"Layanan yang sangat memuaskan! Komputer saya kembali berfungsi dengan baik setelah servis di sini." - <strong>Andi</strong></p>
+        </div>
+        <div class="testimonial">
+            <p>"Teknisi yang profesional dan cepat. Sangat merekomendasikan!" - <strong>Siti</strong></p>
+        </div>
+        <div class="testimonial">
+            <p>"Saya sangat puas dengan hasil servisnya. Terima kasih!" - <strong>Budi</strong></p>
+        </div>
+    </section>
+
+    <section id="faq">
+        <h2>FAQ</h2>
+        <div class="faq">
+            <h4>Apa saja layanan yang Anda tawarkan?</h4>
+            <p>Kami menawarkan layanan servis hardware, software, perawatan rutin, upgrade sistem, dan data recovery.</p>
+        </div>
+        <div class="faq">
+            <h4>Berapa lama waktu yang dibutuhkan untuk servis?</h4>
+            <p>Waktu servis tergantung pada jenis layanan yang dibutuhkan, biasanya antara 1 hingga 3 hari.</p>
+        </div>
+        <div class="faq">
+            <h4>Apakah Anda memberikan garansi untuk layanan Anda?</h4>
+            <p>Ya, kami memberikan garansi untuk semua layanan yang kami lakukan.</p>
+        </div>
+    </section>
+
+    <section id="contact">
+        <h2>Kontak Kami</h2>
+        <p>Alamat: Kampung Sayuran Rt 03 / Rw 07 No.40, Cijerah, Kota Bandung, Bandung Kulon, ID 40213</p>
+        <p>Telepon: <a href="tel:+6285295901946">(+62) 85295901946</a></p>
+        <p>Email: <a href="mailto:computermaintenancebandung@gmail.com">computermaintenancebandung@gmail.com</a></p>
+        <p><a href="https://wa.me/6285295901946" class="cta-button">Chat via WhatsApp</a></p>
+        <p><a href="https://maps.app.goo.gl/NSvh6334hUrXW6ds7" target="_blank" class="cta-button">Lokasi di Google Maps</a></p>
+    </section>
 
     <footer>
-        <p>&copy; 2023 Layanan Pemeliharaan Komputer. Semua hak dilindungi.</p>
+        <p>&copy; 2023 Computer Maintenance. All rights reserved.</p>
     </footer>
+
+    <script>
+        // Script untuk FAQ
+        const faqHeaders = document.querySelectorAll('.faq h4');
+        faqHeaders.forEach(header => {
+            header.addEventListener('click', () => {
+                const p = header.nextElementSibling;
+                p.style.display = p.style.display === 'block' ? 'none' : 'block';
+            });
+        });
+    </script>
 </body>
 </html>
